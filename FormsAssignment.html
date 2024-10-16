@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Name: Jonah A.-->
+<!--Date: 10/9/2024-->
+<!--Instructor: Rosyln Samuels -->
+<!-- subject: web Markup and scripting -->
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>Form Validation with Regular Expressions</title>
+
+   <!--  start of css/ style tag-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 96%;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+/* If invalid entry /error  make the input field Red */
+    .error {
+      color: red;
+    }
+  </style>
+   <!-- End of css/ style tag-->
+</head>
+
+<body>
+  <!--Header for My Form-->
+  <h1>Form Validation with Regular Expressions</h1>
+
+ 
+
+  <!--Begin Form-->
+  <form id="myForm" onsubmit="return false">
+   
+    <!--Label for Title-->
+    <label for="inputFieldLabel">Alphanumeric Input:</label>
+    
+    <!--My Input Field -- we use placeholder attribute -->
+    <input type="text" id="inputField" name="inputField" placeholder="Enter text">
+    <!--Button to Submit Form-->
+    <button type="submit" id="ValidateBeforeSubmitBtn">Submit</button>
+    
+    <!--Hide paragraph with validation for alphanumeric by using style 
+    display:none we'll need to call and show in Javascript-->
+    <p id="errorMessage" class="error" style="display:none;"></p> 
+    
+    <!--This is reference to JavaScript code-->
+    <script src="validationScript.js"></script>  
+
+  </form>
+  <!--End Form-->
+
+
+   
+  
+</body>
+
+</html>
